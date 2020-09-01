@@ -1,0 +1,67 @@
+class ParkingLot:
+	def __init__(self):
+		self.capacity = 0
+		self.slotid = 0
+		self.numOfOccupiedSlots = 0
+
+	def createParkingLot(self,capacity):
+		self.slots = [-1] * capacity
+		self.capacity = capacity
+		return self.capacity
+
+	def getEmptySlot(self):
+		for i in range(len(self.slots)):
+			if self.slots[i] == -1:
+				return i
+
+	def park(self,regno,color):
+		if self.numOfOccupiedSlots < self.capacity: C:\ProgramData\Anaconda3\python.exe "C:\Program Files\JetBrains\PyCharm Community Edition 2019.3.3\plugins\python-ce\helpers\pydev\pydevconsole.py" --mode=client --port=51668
+import sys; print('Python %s on %s' % (sys.version, sys.platform))
+sys.path.extend(['C:\\Users\\vipul_aggarwal\\Desktop\\AppliedAIFiles', 'C:/Users/vipul_aggarwal/Desktop/AppliedAIFiles'])
+Python 3.7.4 (default, Aug  9 2019, 18:34:13) [MSC v.1915 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.8.0 -- An enhanced Interactive Python. Type '?' for help.
+PyDev console: using IPython 7.8.0
+Python 3.7.4 (default, Aug  9 2019, 18:34:13) [MSC v.1915 64 bit (AMD64)] on win32
+runfile('C:/Users/vipul_aggarwal/Desktop/AppliedAIFiles/Deeksha_Tech_Quest/ParkingLot.py', wdir='C:/Users/vipul_aggarwal/Desktop/AppliedAIFiles/Deeksha_Tech_Quest')
+$ >? create_parking_lot 6
+Created a parking lot with 6 slots
+$ >? park KA-01-HH-1234 White
+<__main__.Car object at 0x000002184AA163C8>
+[-1, -1, -1, -1, -1, -1]
+Allocated slot number: 1
+$ >? park KA-01-HH-9999 White
+<__main__.Car object at 0x000002184AA2A288>
+[<__main__.Car object at 0x000002184AA163C8>, -1, -1, -1, -1, -1]
+Allocated slot number: 2
+$ >? park KA-01-BB-0001 Black
+<__main__.Car object at 0x000002184AA5A508>
+[<__main__.Car object at 0x000002184AA163C8>, <__main__.Car object at 0x000002184AA2A288>, -1, -1, -1, -1]
+Allocated slot number: 3
+$ >? park KA-01-HH-7777 Red
+<__main__.Car object at 0x000002184AA5A5C8>
+[<__main__.Car object at 0x000002184AA163C8>, <__main__.Car object at 0x000002184AA2A288>, <__main__.Car object at 0x000002184AA5A508>, -1, -1, -1]
+Allocated slot number: 4
+$ >? park KA-01-HH-2701 Blue
+<__main__.Car object at 0x000002184AA5A688>
+[<__main__.Car object at 0x000002184AA163C8>, <__main__.Car object at 0x000002184AA2A288>, <__main__.Car object at 0x000002184AA5A508>, <__main__.Car object at 0x000002184AA5A5C8>, -1, -1]
+Allocated slot number: 5
+$ >? park KA-01-HH-3141 Black
+<__main__.Car object at 0x000002184AA5A748>
+[<__main__.Car object at 0x000002184AA163C8>, <__main__.Car object at 0x000002184AA2A288>, <__main__.Car object at 0x000002184AA5A508>, <__main__.Car object at 0x000002184AA5A5C8>, <__main__.Car object at 0x000002184AA5A688>, -1]
+Allocated slot number: 6
+$ >? status
+Slot No.	Registration No.	Colour
+1		KA-01-HH-1234		White
+2		KA-01-HH-9999		White
+3		KA-01-BB-0001		Black
+4		KA-01-HH-7777		Red
+5		KA-01-HH-2701		Blue
+6		KA-01-HH-3141		Black
+$ >? slot_number_for_registration_number KA-01-HH-3141
+6
+$ >? park KA-01-P-333 White
+Sorry, parking lot is full
+$ >? slot_numbers_for_cars_with_colour White
+1, 2
+$ 

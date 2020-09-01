@@ -1,0 +1,6 @@
+Enter the number of Strings to input2
+Enter Stringsacb
+Enter Stringsacbd
+['acb', 'acbd']
+abc acb bac bca cab cba 
+abcd abdc acbd acdb adbc adcb bacd badc bcad bcda bdac bdca cabd cadb cbad cbda cdab cdba dabc dacb dbac dbca dcab dcba 
